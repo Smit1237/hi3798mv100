@@ -40,6 +40,7 @@ function setpaths()
     PATH=${arm_histbv310_path}:${PATH//${arm_histbv310_path}:/}
     PATH=${aarch64_histbv100_path}:${PATH//${aarch64_histbv100_path}:/}
     PATH=${utils_path}:${PATH//${utils_path}:/}
+    export LC_ALL=C
 }
 
 function check_bash()
