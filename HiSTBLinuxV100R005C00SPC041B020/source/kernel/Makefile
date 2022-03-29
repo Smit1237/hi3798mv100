@@ -136,7 +136,7 @@ endif
 endif
 
 $(KERNEL_OUT_DIR)/arch/$(CFG_HI_CPU_ARCH)/boot/uImage: prepare
-	make -C $(KERNEL_SRC_DIR) ARCH=$(CFG_HI_CPU_ARCH) \
+	make -j $(nproc) -C $(KERNEL_SRC_DIR) ARCH=$(CFG_HI_CPU_ARCH) \
 		CROSS_COMPILE=$(CROSS_COMPILE) \
 		O=$(BUILD_DIR) \
 		CONFIG_MSP=y \
